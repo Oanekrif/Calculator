@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <style>
+        .symbol{
+            width: 30px;
+            height: 30px;
+            text-align-last: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Calculator</h1>
@@ -18,45 +25,47 @@
         <tbody>
             <tr>
                 <td width="30" height="30" align="center" id="clear">AC</td>
-                <td width="30" align="center" id="rightp">(</td>
-                <td width="30" align="center" id="leftp">)</td>
-                <td width="30" align="center" id="div">/</td>
+                <td class="symbol" id="rightp">(</td>
+                <td class="symbol" id="leftp">)</td>
+                <td class="symbol" id="div">/</td>
             </tr>
             <tr>
-                <td height="30" align="center" id="num7">7</td>
-                <td align="center" id="num8">8</td>
-                <td align="center" id="num9">9</td>
-                <td align="center" id="mult">*</td>
+                <td class="symbol" id="num7">7</td>
+                <td class="symbol" id="num8">8</td>
+                <td class="symbol" id="num9">9</td>
+                <td class="symbol" id="mult">*</td>
             </tr>
             <tr>
-                <td height="30" align="center" id="num4">4</td>
-                <td align="center" id="num5">5</td>
-                <td align="center" id="num6">6</td>
-                <td align="center" id="sub">-</td>
+                <td class="symbol" id="num4">4</td>
+                <td class="symbol" id="num5">5</td>
+                <td class="symbol" id="num6">6</td>
+                <td class="symbol" id="sub">-</td>
             </tr>
             <tr>
-                <td height="30" align="center" id="num1">1</td>
-                <td align="center" id="num2">2</td>
-                <td align="center" id="num3">3</td>
-                <td align="center" id="plus">+</td>
+                <td class="symbol" id="num1">1</td>
+                <td class="symbol" id="num2">2</td>
+                <td class="symbol" id="num3">3</td>
+                <td class="symbol" id="plus">+</td>
             </tr>
             <tr>
-                <td colspan="2" height="20" align="left" id="num0">0</td>
-                <td align="center" id="decimal">.</td>
-                <td align="center" id="equal">=</td>
+                <td class="symbol" colspan="2" id="num0">0</td>
+                <td class="symbol" id="decimal">.</td>
+                <td class="symbol" id="equal">=</td>
             </tr>
         </tbody>
 
     </table>
     <script>
+        /*
         function printSymbol(e){
 
             let result = document.getElementById("result");
             let obj = e.target;
             result.value = result.value + obj.textContent ;
         }
+        */
 
-        function printDigit(e){
+        function printSymbol(e){
 
             let result = document.getElementById("result");
             let obj = e.target;
@@ -71,7 +80,6 @@
         function clearScreen(e){
             document.getElementById("result").value = 0;
         }
-
 
         let result = document.getElementById("result");
         let num0 = document.getElementById("num0");
@@ -94,16 +102,22 @@
         let rightp = document.getElementById("rightp");
         let leftp= document.getElementById("leftp");
 
-        num0.addEventListener("click",printDigit);
-        num1.addEventListener("click",printDigit);
-        num2.addEventListener("click",printDigit);
-        num3.addEventListener("click",printDigit);
-        num4.addEventListener("click",printDigit);
-        num5.addEventListener("click",printDigit);
-        num6.addEventListener("click",printDigit);
-        num7.addEventListener("click",printDigit);
-        num8.addEventListener("click",printDigit);
-        num9.addEventListener("click",printDigit);
+        let symbols = [num0,num1,num2,num3,num4,num5,num6,num7,num8,num9,sub,plus,mult,div,decimal,rightp,leftp];
+        for(let i=0 ; i<symbols.length ; i++){
+            symbols[i].addEventListener("click",printSymbol);
+        }
+
+        /*
+        num0.addEventListener("click",printSymbol);
+        num1.addEventListener("click",printSymbol);
+        num2.addEventListener("click",printSymbol);
+        num3.addEventListener("click",printSymbol);
+        num4.addEventListener("click",printSymbol);
+        num5.addEventListener("click",printSymbol);
+        num6.addEventListener("click",printSymbol);
+        num7.addEventListener("click",printSymbol);
+        num8.addEventListener("click",printSymbol);
+        num9.addEventListener("click",printSymbol);
         sub.addEventListener("click",printSymbol);
         plus.addEventListener("click",printSymbol);
         mult.addEventListener("click",printSymbol);
@@ -111,6 +125,7 @@
         decimal.addEventListener("click",printSymbol);
         rightp.addEventListener("click",printSymbol);
         leftp.addEventListener("click",printSymbol);
+        */
 
         //clear.addEventListener("click", e => document.getElementById("result").textContent = 0);
         clear.addEventListener("click",clearScreen);
