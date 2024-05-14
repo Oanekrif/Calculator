@@ -10,14 +10,16 @@
     <table border="1">
         <thead>
             <tr>
-                <td colspan="4" align="right" height="20" id="result">0</td>
+                <td colspan="4" height="20">
+                    <input type="textbox" id="result" width="200px" value="0">
+                </td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td width="30" height="30" align="center" id="clear">AC</td>
-                <td width="30" align="center" id="sign">+/-</td>
-                <td width="30" align="center" id="perc">%</td>
+                <td width="30" align="center" id="rightp">(</td>
+                <td width="30" align="center" id="leftp">)</td>
                 <td width="30" align="center" id="div">/</td>
             </tr>
             <tr>
@@ -51,22 +53,23 @@
 
             let result = document.getElementById("result");
             let obj = e.target;
-            result.textContent = result.textContent + obj.textContent ;
+            result.value = result.value + obj.textContent ;
         }
 
         function printDigit(e){
 
             let result = document.getElementById("result");
             let obj = e.target;
-            if (result.textContent == 0){
-                result.textContent = obj.textContent;
+            if (result.value == 0){
+                result.value = obj.textContent;
             }else{
-                result.textContent = result.textContent + obj.textContent ;
+                result.value = result.value + obj.textContent ;
             }
         }
+
         
         function clearScreen(e){
-            document.getElementById("result").textContent = 0;
+            document.getElementById("result").value = 0;
         }
 
 
@@ -88,6 +91,8 @@
         let decimal = document.getElementById("decimal");
         let clear = document.getElementById("clear");
         let equal = document.getElementById("equal");
+        let rightp = document.getElementById("rightp");
+        let leftp= document.getElementById("leftp");
 
         num0.addEventListener("click",printDigit);
         num1.addEventListener("click",printDigit);
@@ -104,11 +109,13 @@
         mult.addEventListener("click",printSymbol);
         div.addEventListener("click",printSymbol);
         decimal.addEventListener("click",printSymbol);
+        rightp.addEventListener("click",printSymbol);
+        leftp.addEventListener("click",printSymbol);
 
         //clear.addEventListener("click", e => document.getElementById("result").textContent = 0);
         clear.addEventListener("click",clearScreen);
 
-        equal.addEventListener("click", e => result.textContent = eval(result.textContent ));
+        equal.addEventListener("click", e => result.value = eval(result.value ));
 
     </script>
 </body>
