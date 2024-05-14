@@ -18,13 +18,13 @@
                 <td width="30" height="30" align="center" id="clear">AC</td>
                 <td width="30" align="center" id="sign">+/-</td>
                 <td width="30" align="center" id="perc">%</td>
-                <td width="30" align="center" id="div">÷</td>
+                <td width="30" align="center" id="div">/</td>
             </tr>
             <tr>
                 <td height="30" align="center" id="num7">7</td>
                 <td align="center" id="num8">8</td>
                 <td align="center" id="num9">9</td>
-                <td align="center" id="mult">×</td>
+                <td align="center" id="mult">*</td>
             </tr>
             <tr>
                 <td height="30" align="center" id="num4">4</td>
@@ -51,9 +51,20 @@
 
             let result = document.getElementById("result");
             let obj = e.target;
-            result.textContent = 
-            result.textContent + obj.textContent ;
+            result.textContent = result.textContent + obj.textContent ;
         }
+
+        function printDigit(e){
+
+            let result = document.getElementById("result");
+            let obj = e.target;
+            if (result.textContent == 0){
+                result.textContent = obj.textContent;
+            }else{
+                result.textContent = result.textContent + obj.textContent ;
+            }
+        }
+        
         function clearScreen(e){
             document.getElementById("result").textContent = 0;
         }
@@ -76,26 +87,29 @@
         let div = document.getElementById("div");
         let decimal = document.getElementById("decimal");
         let clear = document.getElementById("clear");
+        let equal = document.getElementById("equal");
 
-        num0.addEventListener("click",printSymbol);
-        num1.addEventListener("click",printSymbol);
-        num2.addEventListener("click",printSymbol);
-        num3.addEventListener("click",printSymbol);
-        num4.addEventListener("click",printSymbol);
-        num5.addEventListener("click",printSymbol);
-        num6.addEventListener("click",printSymbol);
-        num7.addEventListener("click",printSymbol);
-        num8.addEventListener("click",printSymbol);
-        num9.addEventListener("click",printSymbol);
+        num0.addEventListener("click",printDigit);
+        num1.addEventListener("click",printDigit);
+        num2.addEventListener("click",printDigit);
+        num3.addEventListener("click",printDigit);
+        num4.addEventListener("click",printDigit);
+        num5.addEventListener("click",printDigit);
+        num6.addEventListener("click",printDigit);
+        num7.addEventListener("click",printDigit);
+        num8.addEventListener("click",printDigit);
+        num9.addEventListener("click",printDigit);
         sub.addEventListener("click",printSymbol);
         plus.addEventListener("click",printSymbol);
         mult.addEventListener("click",printSymbol);
         div.addEventListener("click",printSymbol);
         decimal.addEventListener("click",printSymbol);
 
-        /*clear.addEventListener("click", e => document.getElementById("result").textContent = 0);
-        */
+        //clear.addEventListener("click", e => document.getElementById("result").textContent = 0);
         clear.addEventListener("click",clearScreen);
+
+        equal.addEventListener("click", e => result.textContent = eval(result.textContent ));
+
     </script>
 </body>
 </html>
