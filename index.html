@@ -24,7 +24,7 @@
                 <td height="30" align="center" id="num7">7</td>
                 <td align="center" id="num8">8</td>
                 <td align="center" id="num9">9</td>
-                <td align="center" id="mult">x</td>
+                <td align="center" id="mult">×</td>
             </tr>
             <tr>
                 <td height="30" align="center" id="num4">4</td>
@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td colspan="2" height="20" align="left" id="num0">0</td>
-                <td align="center" id="deciml">.</td>
+                <td align="center" id="decimal">.</td>
                 <td align="center" id="equal">=</td>
             </tr>
         </tbody>
@@ -54,8 +54,13 @@
             result.textContent = 
             result.textContent + obj.textContent ;
         }
+        function clearScreen(e){
+            document.getElementById("result").textContent = 0;
+        }
+
 
         let result = document.getElementById("result");
+        let num0 = document.getElementById("num0");
         let num1 = document.getElementById("num1");
         let num2 = document.getElementById("num2");
         let num3 = document.getElementById("num3");
@@ -65,7 +70,14 @@
         let num7 = document.getElementById("num7");
         let num8 = document.getElementById("num8");
         let num9 = document.getElementById("num9");
+        let sub = document.getElementById("sub");
+        let plus = document.getElementById("plus");
+        let mult = document.getElementById("mult");
+        let div = document.getElementById("div");
+        let decimal = document.getElementById("decimal");
+        let clear = document.getElementById("clear");
 
+        num0.addEventListener("click",printSymbol);
         num1.addEventListener("click",printSymbol);
         num2.addEventListener("click",printSymbol);
         num3.addEventListener("click",printSymbol);
@@ -75,7 +87,15 @@
         num7.addEventListener("click",printSymbol);
         num8.addEventListener("click",printSymbol);
         num9.addEventListener("click",printSymbol);
+        sub.addEventListener("click",printSymbol);
+        plus.addEventListener("click",printSymbol);
+        mult.addEventListener("click",printSymbol);
+        div.addEventListener("click",printSymbol);
+        decimal.addEventListener("click",printSymbol);
 
+        /*clear.addEventListener("click", e => document.getElementById("result").textContent = 0);
+        */
+        clear.addEventListener("click",clearScreen);
     </script>
 </body>
 </html>
