@@ -8,39 +8,74 @@
 <body>
     <h1>Calculator</h1>
     <table border="1">
-        <tr>
-            <td colspan="4" align="right" height="20">0</td>
-        </tr>
-        <tr>
-            <td width="30" height="30" align="center">AC</td>
-            <td width="30" align="center">+/-</td>
-            <td width="30" align="center">%</td>
-            <td width="30" align="center">÷</td>
-        </tr>
-        <tr>
-            <td height="30" align="center">7</td>
-            <td align="center">8</td>
-            <td align="center">9</td>
-            <td align="center">x</td>
-        </tr>
-        <tr>
-            <td height="30" align="center">4</td>
-            <td align="center">5</td>
-            <td align="center">6</td>
-            <td align="center">-</td>
-        </tr>
-        <tr>
-            <td height="30" align="center">1</td>
-            <td align="center">2</td>
-            <td align="center">3</td>
-            <td align="center">+</td>
-        </tr>
-        <tr>
-            <td colspan="2" height="20" align="left">0</td>
-            <td align="center">.</td>
-            <td align="center">=</td>
-        </tr>
+        <thead>
+            <tr>
+                <td colspan="4" align="right" height="20" id="result">0</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="30" height="30" align="center" id="clear">AC</td>
+                <td width="30" align="center" id="sign">+/-</td>
+                <td width="30" align="center" id="perc">%</td>
+                <td width="30" align="center" id="div">÷</td>
+            </tr>
+            <tr>
+                <td height="30" align="center" id="num7">7</td>
+                <td align="center" id="num8">8</td>
+                <td align="center" id="num9">9</td>
+                <td align="center" id="mult">x</td>
+            </tr>
+            <tr>
+                <td height="30" align="center" id="num4">4</td>
+                <td align="center" id="num5">5</td>
+                <td align="center" id="num6">6</td>
+                <td align="center" id="sub">-</td>
+            </tr>
+            <tr>
+                <td height="30" align="center" id="num1">1</td>
+                <td align="center" id="num2">2</td>
+                <td align="center" id="num3">3</td>
+                <td align="center" id="plus">+</td>
+            </tr>
+            <tr>
+                <td colspan="2" height="20" align="left" id="num0">0</td>
+                <td align="center" id="deciml">.</td>
+                <td align="center" id="equal">=</td>
+            </tr>
+        </tbody>
 
     </table>
+    <script>
+        function printSymbol(e){
+
+            let result = document.getElementById("result");
+            let obj = e.target;
+            result.textContent = 
+            result.textContent + obj.textContent ;
+        }
+
+        let result = document.getElementById("result");
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        let num3 = document.getElementById("num3");
+        let num4 = document.getElementById("num4");
+        let num5 = document.getElementById("num5");
+        let num6 = document.getElementById("num6");
+        let num7 = document.getElementById("num7");
+        let num8 = document.getElementById("num8");
+        let num9 = document.getElementById("num9");
+
+        num1.addEventListener("click",printSymbol);
+        num2.addEventListener("click",printSymbol);
+        num3.addEventListener("click",printSymbol);
+        num4.addEventListener("click",printSymbol);
+        num5.addEventListener("click",printSymbol);
+        num6.addEventListener("click",printSymbol);
+        num7.addEventListener("click",printSymbol);
+        num8.addEventListener("click",printSymbol);
+        num9.addEventListener("click",printSymbol);
+
+    </script>
 </body>
 </html>
