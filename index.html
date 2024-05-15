@@ -27,41 +27,48 @@
                 <td class="symbol" id="clear">AC</td>
                 <td class="symbol" id="rightp">(</td>
                 <td class="symbol" id="leftp">)</td>
-                <td class="symbol" id="div">/</td>
+                <td class="symbol sign" id="div">/</td>
             </tr>
             <tr>
                 <td class="symbol" id="num7">7</td>
                 <td class="symbol" id="num8">8</td>
                 <td class="symbol" id="num9">9</td>
-                <td class="symbol" id="mult">*</td>
+                <td class="symbol sign" id="mult">*</td>
             </tr>
             <tr>
                 <td class="symbol" id="num4">4</td>
                 <td class="symbol" id="num5">5</td>
                 <td class="symbol" id="num6">6</td>
-                <td class="symbol" id="sub">-</td>
+                <td class="symbol sign" id="sub">-</td>
             </tr>
             <tr>
                 <td class="symbol" id="num1">1</td>
                 <td class="symbol" id="num2">2</td>
                 <td class="symbol" id="num3">3</td>
-                <td class="symbol" id="plus">+</td>
+                <td class="symbol sign" id="plus">+</td>
             </tr>
             <tr>
                 <td class="symbol" colspan="2" id="num0">0</td>
-                <td class="symbol" id="decimal">.</td>
+                <td class="symbol sign" id="decimal">.</td>
                 <td id="equal">=</td>
             </tr>
     </table>
     <script>
-        function printSymbol(e){
-            let result = document.getElementById("result");
-            let obj = e.target;
-            if (result.value == 0)
-                result.value = obj.textContent;
-            else
-                result.value = result.value + obj.textContent ;
-        }
+        'use strict'
+    function printSymbol(e) {
+    let result = document.getElementById("result");
+    let obj = e.target;
+    let currentText = result.value;
+    let newText = obj.textContent;
+    const operators = ['+', '-', '*', '/', '.', ')'];
+    if ((currentText === '0' || currentText === '') && operators.includes(newText)) {
+        return;
+    } else if (currentText === '0' && !operators.includes(newText)) {
+        result.value = newText;
+    } else {
+        result.value += newText;
+    }
+}
         let result = document.getElementById("result");
         let clear = document.getElementById("clear");
         let equal = document.getElementById("equal");
