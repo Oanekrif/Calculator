@@ -1,0 +1,8 @@
+.symbol,#equal{
+    width: 30px;
+    height: 30px;
+    text-align-last: center;
+}
+table,td,tr{
+    border: 1px solid black;
+}

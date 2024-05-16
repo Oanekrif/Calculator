@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
-    <style>
-        .symbol,#equal{
-            width: 30px;
-            height: 30px;
-            text-align-last: center;
-        }
-        table,td,tr{
-            border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
     <h1>Calculator</h1>
@@ -53,30 +44,6 @@
                 <td id="equal">=</td>
             </tr>
     </table>
-    <script>
-        'use strict'
-    function printSymbol(e) {
-    let result = document.getElementById("result");
-    let obj = e.target;
-    let currentText = result.value;
-    let newText = obj.textContent;
-    const operators = ['+', '-', '*', '/', '.', ')'];
-    if ((currentText === '0' || currentText === '') && operators.includes(newText)) {
-        return;
-    } else if (currentText === '0' && !operators.includes(newText)) {
-        result.value = newText;
-    } else {
-        result.value += newText;
-    }
-}
-        let result = document.getElementById("result");
-        let clear = document.getElementById("clear");
-        let equal = document.getElementById("equal");
-        let symbols = document.getElementsByClassName("symbol") 
-        for(let i=0 ; i<symbols.length ; i++)
-            symbols[i].addEventListener("click",printSymbol);
-        clear.addEventListener("click", e => document.getElementById("result").value = 0);
-        equal.addEventListener("click", e => result.value = eval(result.value ));
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
