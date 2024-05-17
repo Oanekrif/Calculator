@@ -1,8 +1,61 @@
-.symbol,#equal{
-    width: 30px;
-    height: 30px;
-    text-align-last: center;
+body{
+    background-color: blanchedalmond;
 }
-table,td,tr{
-    border: 1px solid black;
+.symbol,#equal{
+    width: 90px;
+    height: 90px;
+    text-align-last: center;
+    font-size: 30px;
+}
+input{
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    background-color: beige;
+}
+.table{
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: all 0.5s;
+    background-color: rgb(47, 47, 47);
+    color: white;
+}
+.table:hover{
+    border: 1px solid rgb(47, 47, 47);
+    border-radius: 5px;
+    transition: all 0.5s;
+    background-color: white;
+    color:rgb(47, 47, 47);
+}
+.sign{
+    
+}
+.sign2,#equal{
+    background-color:rgb(253, 165, 0);
+    color: black;
+}
+.sign2:hover{
+    background-color: black;
+    color: rgb(253, 165, 0);
+}
+#equal:hover{
+    background-color: black;
+    color: rgb(253, 165, 0);
+}
+h1{
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    margin-left: -70px;
+    font-size: 40px;
+    color: rgb(221, 29, 29);
+}
+div{
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    margin-left: -200px;
+}
+#num0 ,#decimal ,#equal{
+    height: 75px;
 }

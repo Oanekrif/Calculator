@@ -4,46 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon0.png" type="image/x-icon">
     <title>Calculator</title>
 </head>
 <body>
     <h1>Calculator</h1>
-    <table>
-            <tr>
-                <td colspan="4" height="20">
-                    <input type="textbox" id="result" width="200px" value="0">
+    <div>
+    <table class="table">
+            <tr class="table">
+                <td colspan="4" class="table">
+                    <input class="scan" type="textbox" id="result" value="0">
                 </td>
             </tr>
-            <tr>
-                <td class="symbol" id="clear">AC</td>
-                <td class="symbol" id="rightp">(</td>
-                <td class="symbol" id="leftp">)</td>
-                <td class="symbol sign" id="div">/</td>
+            <tr class="table">
+                <td class="symbol table" id="clear">AC</td>
+                <td class="symbol table" id="rightp">(</td>
+                <td class="symbol table" id="leftp">)</td>
+                <td class="symbol sign table sign2" id="div">/</td>
             </tr>
-            <tr>
-                <td class="symbol" id="num7">7</td>
-                <td class="symbol" id="num8">8</td>
-                <td class="symbol" id="num9">9</td>
-                <td class="symbol sign" id="mult">*</td>
+            <tr class="table">
+                <td class="symbol table" id="num7">7</td>
+                <td class="symbol table" id="num8">8</td>
+                <td class="symbol table" id="num9">9</td>
+                <td class="symbol sign table sign2" id="mult">*</td>
             </tr>
-            <tr>
-                <td class="symbol" id="num4">4</td>
-                <td class="symbol" id="num5">5</td>
-                <td class="symbol" id="num6">6</td>
-                <td class="symbol sign" id="sub">-</td>
+            <tr class="table">
+                <td class="symbol table" id="num4">4</td>
+                <td class="symbol table" id="num5">5</td>
+                <td class="symbol table" id="num6">6</td>
+                <td class="symbol sign table sign2" id="sub">-</td>
             </tr>
-            <tr>
-                <td class="symbol" id="num1">1</td>
-                <td class="symbol" id="num2">2</td>
-                <td class="symbol" id="num3">3</td>
-                <td class="symbol sign" id="plus">+</td>
+            <tr class="table">
+                <td class="symbol table" id="num1">1</td>
+                <td class="symbol table" id="num2">2</td>
+                <td class="symbol table" id="num3">3</td>
+                <td class="symbol sign table sign2" id="plus">+</td>
             </tr>
-            <tr>
-                <td class="symbol" colspan="2" id="num0">0</td>
-                <td class="symbol sign" id="decimal">.</td>
+            <tr class="table">
+                <td class="symbol table" colspan="2" id="num0">0</td>
+                <td class="symbol sign table" id="decimal">.</td>
                 <td id="equal">=</td>
             </tr>
     </table>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
