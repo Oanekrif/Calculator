@@ -2,7 +2,7 @@
 
 
 ## 📋 Project Description:
-This is a simple calculator web application built using HTML, CSS, and JavaScript. The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It also supports decimal numbers and parentheses for complex expressions.</br>
+This is a simple calculator web application built using HTML, CSS, and JavaScript. The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It also supports decimal numbers and parentheses for complex expressions.</br> [`Click here to visit the website`](https://oanekrif.github.io/Calculator/) </br>
 
 ## 🔧 Technologies Used:
 • HTML: Structure of the calculator interface.</br>
@@ -22,7 +22,7 @@ This is a simple calculator web application built using HTML, CSS, and JavaScrip
 2. Navigate to the project folder:
     ```bash
    cd Calculator
-3. Open the [index.html](https://oanekrif.github.io/Calculator/) file in your browser:
+3. Open the index.html file in your browser:
     ```bash
    open index.html   # or double-click the file to open it in your browser
 4. Start using the calculator by clicking on the buttons for numbers and operations.
