@@ -38,7 +38,7 @@ This is a simple calculator web application built using HTML, CSS, and JavaScrip
 • Buttons for operators and "=" have a distinct background color for easy identification.</br>
 
 # 📸 Screenshots:
-(Add screenshots of your project here to show the user interface)</br>
+<img src="https://github.com/Oanekrif/Calculator/blob/master/Calc.png" width="400"></br>
 
 # 📑 Contributing:
 Feel free to fork the repository, make changes, and submit pull requests for improvements or bug fixes.</br>
